@@ -1,0 +1,35 @@
+<%= render 'books/error', model: @user %>
+<p id="notice"></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<h2>User info</h2>
+<%= form_with model: @user do |f| %>
+
+
+
+<div class= "form-group">
+ <label>Name</label><br>
+ <%= f.text_field :name  %>
+</div>
+
+<div class= "fotm-group">
+ <label>image</label><br>
+ <%= f.file_field :profile_image, accept: "image/*" %>
+</div>
+
+<div class= "form-group">
+ <label>introduction</label><br>
+ <%= f.text_area :introduction %>
+</div>
+
+<div class= "form-group">
+ <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">
+</div>
+
+  <% end %>
+</div>
+ </div>
+  </div>
+  
+  <%= render'users/footer' %>
